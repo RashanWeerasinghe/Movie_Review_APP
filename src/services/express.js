@@ -1,10 +1,12 @@
 const express= require ("express");
 
+const config=require('../config');
+
 const app=express();
 
 exports.start=()=>{
     
-    app.listen(4041,(err)=>{
+    app.listen(config.port,(err)=>{
                  
         if(err){
           console.error('Error: ${err}');
